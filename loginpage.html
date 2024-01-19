@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .container {
+            width: 300px;
+            padding: 16px;
+            background-color: white;
+            margin: auto;
+        }
+
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" id="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" id="password" required>
+
+    <button onclick="validateLogin()">Login</button>
+</div>
+
+<script>
+    function validateLogin() {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+      
+        if (email === 'prabhanshrai007@gmail.com' && password === 'password123') {
+            alert('welcome to the site!!.');
+            window.location.href = 'index.html';
+        } else {
+            alert('Invalid email or password. Please try again.');
+        }
+    }
+</script>
+<p>Click <a href="newlog.html">here</a> to create a new Account.</p>
+</body>
+</html>
